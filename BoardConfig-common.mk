@@ -73,8 +73,8 @@ AB_OTA_PARTITIONS += \
     system_ext
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := device/google/redbull/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/google/redbull/fstab.hardware
+TARGET_RECOVERY_WIPE := device/google/redbull-barbet/recovery.wipe
+TARGET_RECOVERY_FSTAB := device/google/redbull-barbet/fstab.hardware
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_UI_LIB := \
     librecovery_ui_pixel \
@@ -109,7 +109,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
 
-include device/google/redbull-sepolicy/redbull-sepolicy.mk
+include device/google/redbull-sepolicy-barbet/redbull-sepolicy.mk
 
 QCOM_BOARD_PLATFORMS += lito
 QC_PROP_ROOT := vendor/qcom/sm7250/proprietary
@@ -201,10 +201,10 @@ TARGET_HAS_WIDE_COLOR_DISPLAY := true
 TARGET_HAS_HDR_DISPLAY := true
 
 # Vendor Interface Manifest
-DEVICE_MANIFEST_FILE := device/google/redbull/manifest.xml
-DEVICE_MATRIX_FILE := device/google/redbull/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/redbull/device_framework_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/google/redbull/framework_manifest.xml
+DEVICE_MANIFEST_FILE := device/google/redbull-barbet/manifest.xml
+DEVICE_MATRIX_FILE := device/google/redbull-barbet/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/redbull-barbet/device_framework_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := device/google/redbull-barbet/framework_manifest.xml
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
@@ -226,12 +226,12 @@ BOARD_SUPER_PARTITION_ERROR_LIMIT := 9231663104
 
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
--include device/google/redbull/soong/pixel_soong_config.mk
+-include device/google/redbull-barbet/soong/pixel_soong_config.mk
 
 # List of modules that should not load automatically
 PRODUCT_COPY_FILES += \
-    device/google/redbull/modules.blocklist:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.blocklist \
-    device/google/redbull/init.insmod.charger.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.charger.cfg \
+    device/google/redbull-barbet/modules.blocklist:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.blocklist \
+    device/google/redbull-barbet/init.insmod.charger.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.insmod.charger.cfg \
 
 # TARGET_BOOLOADER_BOARD_NAME sensitive common boilerplate
 

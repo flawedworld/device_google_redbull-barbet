@@ -17,7 +17,7 @@
 # define hardware platform
 PRODUCT_PLATFORM := sm7250
 
-LOCAL_PATH := device/google/redbull
+LOCAL_PATH := device/google/redbull-barbet
 
 PRODUCT_VENDOR_MOVE_ENABLED := true
 TARGET_BOARD_PLATFORM := lito
@@ -27,7 +27,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/camera \
     hardware/google/interfaces \
     hardware/google/pixel \
-    device/google/redbull \
+    device/google/redbull-barbet \
     hardware/qcom/sm7250 \
     vendor/google/airbrush/floral \
     vendor/google/biometrics/face \
@@ -73,8 +73,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
 
 PRODUCT_COPY_FILES += \
-    device/google/redbull/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml \
-    device/google/redbull/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
+    device/google/redbull-barbet/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml \
+    device/google/redbull-barbet/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.verified_boot.xml
 
@@ -411,9 +411,9 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2-service.st
 
 PRODUCT_COPY_FILES += \
-    device/google/redbull/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
-    device/google/redbull/nfc/libese-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-hal-st.conf \
-    device/google/redbull/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+    device/google/redbull-barbet/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
+    device/google/redbull-barbet/nfc/libese-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-hal-st.conf \
+    device/google/redbull-barbet/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
 
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl-redbull \
@@ -606,14 +606,14 @@ PRODUCT_COPY_FILES += \
 
 # RT5514 SoundTrigger
 PRODUCT_COPY_FILES += \
-    device/google/redbull/audio/rt5514_dsp_fw1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw1.bin \
-    device/google/redbull/audio/rt5514_dsp_fw2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw2.bin \
-    device/google/redbull/audio/rt5514_dsp_fw3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw3.bin \
-    device/google/redbull/audio/rt5514_dsp_fw4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw4.bin \
-    device/google/redbull/audio/rt5514p_dsp_fw1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw1.bin \
-    device/google/redbull/audio/rt5514p_dsp_fw2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw2.bin \
-    device/google/redbull/audio/rt5514p_dsp_fw3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw3.bin \
-    device/google/redbull/audio/rt5514p_dsp_fw4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw4.bin
+    device/google/redbull-barbet/audio/rt5514_dsp_fw1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw1.bin \
+    device/google/redbull-barbet/audio/rt5514_dsp_fw2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw2.bin \
+    device/google/redbull-barbet/audio/rt5514_dsp_fw3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw3.bin \
+    device/google/redbull-barbet/audio/rt5514_dsp_fw4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514_dsp_fw4.bin \
+    device/google/redbull-barbet/audio/rt5514p_dsp_fw1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw1.bin \
+    device/google/redbull-barbet/audio/rt5514p_dsp_fw2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw2.bin \
+    device/google/redbull-barbet/audio/rt5514p_dsp_fw3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw3.bin \
+    device/google/redbull-barbet/audio/rt5514p_dsp_fw4.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/rt5514p_dsp_fw4.bin
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -908,7 +908,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Modem logging file
 PRODUCT_COPY_FILES += \
-    device/google/redbull/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
+    device/google/redbull-barbet/init.logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.$(PRODUCT_PLATFORM).logging.rc
 
 # Pixelstats broken mic detection
 PRODUCT_PROPERTY_OVERRIDES += vendor.audio.mic_break=true
